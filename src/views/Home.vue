@@ -1,15 +1,14 @@
 <template>
   <div class="body-container">
-    <StartContainer/>
-    <template v-if="false">
+    <StartContainer v-if="false"/>
     <MainContainer/>
     <Community :itemData="$store.state.community"/>
     <About/>
     <Statistic :statData="$store.state.statistic"/>
+    <LottieContainer/>
     <Reviews/>
     <Faq :itemData="$store.state.faq"/>
     <CommunityPopup :itemData="$store.state.community"/>
-    </template>
   </div>
 </template>
 
@@ -22,10 +21,12 @@ import Faq from '@/components/Faq.vue'
 import Reviews from '../components/Reviews'
 import Statistic from '../components/Statistic'
 import StartContainer from '../components/Start'
+import LottieContainer from '../components/LottieContainer'
 
 export default {
   name: 'Home',
   components: {
+    LottieContainer,
     StartContainer,
     Statistic,
     Reviews,

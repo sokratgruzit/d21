@@ -1,50 +1,55 @@
 <template>
   <div class="container lottie-container__outer" data-aos="fade-up">
-    <h3 class="font-72" @click="buttonClicked"><span>CORE</span> solves today's hardest
+    <h3 class="font-72"><span>CORE</span> solves today's hardest
       blockchain problems</h3>
     <div class="lottie-container">
-      <div class="lottie-container__item" @mouseover="hover(1)" @mouseleave="leave(1)">
+      <div class="lottie-container__item" @mouseover="hover(1)">
         <lottie-animation
           ref="lottie1"
           :animationData="require(`@/assets/lottie-icons/scalability.json`)"
-          :loop="true"
+          :loop="false"
           :autoPlay="false"
+          @complete="leave(1)"
         />
         <div class="ttl">Scalability</div>
       </div>
-      <div class="lottie-container__item" @mouseover="hover(2)" @mouseleave="leave(2)">
+      <div class="lottie-container__item" @mouseover="hover(2)">
         <lottie-animation
           ref="lottie2"
           :animationData="require(`@/assets/lottie-icons/user_experience.json`)"
-          :loop="true"
+          :loop="false"
           :autoPlay="false"
+          @complete="leave(2)"
         />
         <div class="ttl">User Experience</div>
       </div>
-      <div class="lottie-container__item" @mouseover="hover(3)" @mouseleave="leave(3)">
+      <div class="lottie-container__item" @mouseover="hover(3)">
         <lottie-animation
           ref="lottie3"
           :animationData="require(`@/assets/lottie-icons/usability.json`)"
-          :loop="true"
+          :loop="false"
           :autoPlay="false"
+          @complete="leave(3)"
         />
         <div class="ttl">Usability</div>
       </div>
-      <div class="lottie-container__item" @mouseover="hover(4)" @mouseleave="leave(4)">
+      <div class="lottie-container__item" @mouseover="hover(4)">
         <lottie-animation
           ref="lottie4"
           :animationData="require(`@/assets/lottie-icons/interoperability.json`)"
-          :loop="true"
+          :loop="false"
           :autoPlay="false"
+          @complete="leave(4)"
         />
         <div class="ttl">Interoperability</div>
       </div>
-      <div class="lottie-container__item" @mouseover="hover(5)" @mouseleave="leave(5)">
+      <div class="lottie-container__item" @mouseover="hover(5)">
         <lottie-animation
           ref="lottie5"
           :animationData="require(`@/assets/lottie-icons/security.json`)"
-          :loop="true"
+          :loop="false"
           :autoPlay="false"
+          @complete="leave(5)"
         />
         <div class="ttl">Security</div>
       </div>
@@ -63,6 +68,9 @@ export default {
     }
   },
   methods: {
+    test () {
+      console.log('hi')
+    },
     hover (id) {
       if (id === 1) {
         this.$refs.lottie1.play()
