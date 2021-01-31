@@ -1,22 +1,39 @@
+
 @font-face {
-    font-family: "Lack-Regular";
-    src: url('../font/Lack-Regular.eot');
-    src: url("../font/Lack-Regular.eot?#iefix") format("embedded-opentype"),
-    url("../font/Lack-Regular.svg#Lack-Regular") format("svg"),
-    url("../font/Lack-Regular.ttf") format("truetype"),
-    url("../font/Lack-Regular.woff") format("woff"),
-    url("../font/Lack-Regular.woff2") format("woff2");
+    font-family: 'Jost-Regular';
+    src: url('../font/Jost-Regular.eot');
+    src: url('../font/Jost-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../font/Jost-Regular.woff2') format('woff2'),
+    url('../font/Jost-Regular.woff') format('woff'),
+    url('../font/Jost-Regular.ttf') format('truetype'),
+    url('../font/Jost-Regular.svg#Jost-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
+@font-face {
+    font-family: 'Jost-Medium';
+    src: url('../font/Jost-Medium.eot');
+    src: url('../font/Jost-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../font/Jost-Medium.woff2') format('woff2'),
+    url('../font/Jost-Medium.woff') format('woff'),
+    url('../font/Jost-Medium.ttf') format('truetype'),
+    url('../font/Jost-Medium.svg#Jost-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
 * {
-    font-family: "Lack-Regular";
+    font-family: 'Jost-Regular';
     font-size: 13px;
     color: rgba(255,255,255,1);
     text-decoration: none;
     outline-color: none;
     box-sizing: border-box;
+}
+.medium{
+    font-family: 'Jost-Medium';
 }
 html {
     overflow-x: hidden;
@@ -29,8 +46,8 @@ body {
     -moz-text-size-adjust:100%;
     -ms-text-size-adjust:100%;
     text-size-adjust: 100%;
-    /*padding-bottom: 200vh;*/
-    background: #00050F;
+    padding-bottom: 200vh;
+    background: #0D1935;
     overflow: hidden;
 }
 ul,li,p,img,h1,h2,h3,h4,h5,h6,input,button,nav {
@@ -55,57 +72,31 @@ button {
 .font-18{
     font-size: 18px;
 }
-.font-72{
-    font-size: 72px;
-    line-height: 80px;
+.font-56{
+    font-size: 56px;
+    line-height: 70px;
     color: #fff;
 }
 .container{
     width: 100%;
     max-width: 1920px;
-    padding: 0px 80px;
+    padding: 0px 365px;
     margin: 0px auto;
     display: flex;
+}
+.font-38{
+    font-size: 38px;
+    line-height: 46px;
 }
 .font-72{
     font-size: 72px;
     line-height: 80px;
 }
-.pT-140{
-    padding-top: 140px;
+.pT-120{
+    padding-top: 120px;
 }
-.sliderInner .slick-list{
-    height: 100%!important;
-}
-#about .hooper-track{
-    transition-delay: .7s!important;
-}
-#about .hooper-list{
-    overflow: visible;
-}
-#reviews .hooper-slide{
-    height: fit-content!important;
-}
-.community-popup__inner .slick-slide{
-    pointer-events: none;
-}
-.community-popup__inner .slick-slide.slick-active{
-    pointer-events: all;
-}
-/*#chart g > path{*/
-/*    stroke: rgba(242,242,242,0);*/
-/*}*/
-.statisctic-slider .swiper-slide.swiper-slide-next ~ .swiper-slide ~ .swiper-slide .chart-container__inner{
-    opacity: 0;
-    transform: scale(.9);
-}
-.statisctic-slider .swiper-slide.swiper-slide-next ~ .swiper-slide ~ .swiper-slide .color{
-    opacity: 0;
-    transform: scale(.8);
-}
-.statisctic-slider .swiper-slide.swiper-slide-next ~ .swiper-slide ~ .swiper-slide .descr{
-    opacity: 0;
-    transform: translateY(10px);
+.pB-120{
+    padding-bottom: 120px;
 }
 /* width */
 *::-webkit-scrollbar {
@@ -128,7 +119,7 @@ button {
         line-height: 64px;
     }
     .container{
-        padding: 0px 40px;
+        padding: 0px 135px;
     }
 }
 /*Ipad Pro 1024*/

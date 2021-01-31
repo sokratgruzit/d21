@@ -1,80 +1,52 @@
 {
-  "faq": [
+  "currency": [
     {
-      "id": 1,
-      "question": "How do I install Unium App?",
-      "answer": "The 12 words (your “seed” or secret recovery phrase) are your master seed that generates all your wallet’s addresses and private keys. In other words, with this secret phrase, ANYONE can access your wallet’s funds anytime and anywhere from Unium or another wallet. <br><br> For this reason, do not store your secret 12-word phrase in any digital format, such as a screenshot or picture on your phone, a document on your computer, USB drive, or in the cloud (e.g. Dropbox), an email, etc.<br> <br>Hackers can access digital files and information, but they can’t access an old-fashioned piece\nof paper!"
+      "title": "Buy & Sell Bitcoin Fast",
+      "image": "mainSlider1.jpg"
     },
     {
-      "id": 2,
-      "question": "Where are blockchain assets stored?",
-      "answer": "The 12 words (your “seed” or secret recovery phrase) are your master seed that generates all your wallet’s addresses and private keys. In other words, with this secret phrase, ANYONE can access your wallet’s funds anytime and anywhere from Unium or another wallet. <br><br> For this reason, do not store your secret 12-word phrase in any digital format, such as a screenshot or picture on your phone, a document on your computer, USB drive, or in the cloud (e.g. Dropbox), an email, etc.<br> <br>Hackers can access digital files and information, but they can’t access an old-fashioned piece\nof paper!"
+      "title": "Select Your Own Invest Products on D21",
+      "image": "mainSlider2.jpg"
     },
     {
-      "id": 3,
-      "question": "Where are blockchain assets stored?",
-      "answer": "The 12 words (your “seed” or secret recovery phrase) are your master seed that generates all your wallet’s addresses and private keys. In other words, with this secret phrase, ANYONE can access your wallet’s funds anytime and anywhere from Unium or another wallet. <br><br> For this reason, do not store your secret 12-word phrase in any digital format, such as a screenshot or picture on your phone, a document on your computer, USB drive, or in the cloud (e.g. Dropbox), an email, etc.<br> <br>Hackers can access digital files and information, but they can’t access an old-fashioned piece\nof paper!"
-    }
-  ],
-  "community":[
-    {
-      "id": 1,
-      "title": "Technology",
-      "video": "Technology.mp4",
-      "subTitle": "Core brings a new standard in technology — open and inclusive — to challenge the old and activate a new age of sustainable, globally-distributed innovation.",
-      "text": "From the incremental to global, Core improves how we interact, transact,\nand create — and ultimately operate\nas a global society. Core is a blockchain platform built on the groundbreaking Ouroboros proof-of-stake consensus protocol, and developed using the Haskell programming language."
+      "title": "Exclusive Benefits with D21 Broker Program",
+      "image": "mainSlider3.jpg"
     },
     {
-      "id": 2,
-      "title": "Research",
-      "video": "Research.mp4",
-      "subTitle": "Core brings a new standard in technology — open and inclusive — to challenge the old and activate a new age of sustainable, globally-distributed innovation.",
-      "text": "From the incremental to global, Core improves how we interact, transact,\nand create — and ultimately operate\nas a global society. Core is a blockchain platform built on the groundbreaking Ouroboros proof-of-stake consensus protocol, and developed using the Haskell programming language."
+      "title": "D21 Exchange user manual",
+      "image": "mainSlider4.jpg"
     },
     {
-      "id": 3,
-      "title": "Purpose",
-      "video": "Purpose.mp4",
-      "subTitle": "Core brings a new standard in technology — open and inclusive — to challenge the old and activate a new age of sustainable, globally-distributed innovation.",
-      "text": "From the incremental to global, Core improves how we interact, transact,\nand create — and ultimately operate\nas a global society. Core is a blockchain platform built on the groundbreaking Ouroboros proof-of-stake consensus protocol, and developed using the Haskell programming language."
-    }
-  ],
-  "statistic": [
-    {
-      "id": 1,
-      "name": "Core Launch"
+      "title": "Buy & Sell Bitcoin Fast",
+      "image": "mainSlider1.jpg"
     },
     {
-      "id": 2,
-      "name": "BTT Token <br/> Issuance"
+      "title": "Select Your Own Invest Products on D21",
+      "image": "mainSlider2.jpg"
     },
     {
-      "id": 3,
-      "name": "uTorrent Client with <br/> BitTorrent Speed support"
+      "title": "Exclusive Benefits with D21 Broker Program",
+      "image": "mainSlider3.jpg"
     },
     {
-      "id": 4,
-      "name": "MainNet <br/> Launch"
+      "title": "D21 Exchange user manual",
+      "image": "mainSlider4.jpg"
     },
     {
-      "id": 5,
-      "name": "«BigBang» Air Drop"
+      "title": "Buy & Sell Bitcoin Fast",
+      "image": "mainSlider1.jpg"
     },
     {
-      "id": 6,
-      "name": "On-chain/Off-chain <br/> exchange"
+      "title": "Select Your Own Invest Products on D21",
+      "image": "mainSlider2.jpg"
     },
     {
-      "id": 7,
-      "name": "Wallet Import <br/> and Recovery"
+      "title": "Exclusive Benefits with D21 Broker Program",
+      "image": "mainSlider3.jpg"
     },
     {
-      "id": 8,
-      "name": "Localization <br/> of BitTorrent Speed"
-    },
-    {
-      "id": 9,
-      "name": "«On-demand» AirDrops <br/> to uTorrent users"
+      "title": "D21 Exchange user manual",
+      "image": "mainSlider4.jpg"
     }
   ]
 }

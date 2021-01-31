@@ -7,11 +7,7 @@ export default new Vuex.Store({
   state: {
     activeMenu: null,
     navMenu: items.navigation,
-    community: items.community,
-    faq: items.faq,
-    communityNum: 0,
-    statistic: items.statistic,
-    start: false
+    mainSliderItems: items.currency
   },
   getters: {
   },

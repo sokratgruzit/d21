@@ -1,46 +1,54 @@
 <template>
-  <div id="main" class="outer" :class="firstAnimation ? 'animHead' : ''" v-view="visibilityChanged">
-    <div class="main-video__container">
-      <div class="overlay"></div>
-      <img :src="require(`@/assets/img/gradient.png`)" alt="" class="gradient">
-      <video muted loop autoplay class="main-video">
-        <source :src="require(`@/assets/img/Main.mp4`)" type="video/mp4">
-      </video>
-    </div>
+  <div class="main-container" :class="firstAnimation ? 'animated' : ''">
+    <img :src="require(`@/assets/img/main-slider-bg.jpg`)" alt="" class="main-container__background">
     <div class="container">
-      <div class="main-container__header">
-        <div class="left" @click="test">Decentralized <br> Blockchain Platform</div>
-        <div class="follow-container">
-          <div class="ttl">Follow us</div>
-          <a href="##">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M11.5488 20V10.8777H14.6096L15.0688 7.32156H11.5488V5.05147C11.5488 4.0222 11.8335 3.32076 13.3111 3.32076L15.1926 3.31999V0.13923C14.8673 0.0969453 13.7503 0 12.4503 0C9.73573 0 7.87727 1.65697 7.87727 4.69927V7.32156H4.80725V10.8777H7.87727V20H11.5488Z" fill="white"/>
+      <h1>
+        <div><span class="medium">Buy & Sell Crypto.</span></div>
+        <div><span class="medium">In minutes</span></div>
+      </h1>
+      <div class="main-container__slider">
+        <div class="main-container__slider-nav">
+          <div class="prev">
+            <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 1L2 11L12 21" stroke="white" stroke-width="2"/>
             </svg>
-          </a>
-          <a href="##">
-            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 2.79875C19.2563 3.125 18.4637 3.34125 17.6375 3.44625C18.4875 2.93875 19.1363 2.14125 19.4412 1.18C18.6488 1.6525 17.7738 1.98625 16.8412 2.1725C16.0887 1.37125 15.0162 0.875 13.8462 0.875C11.5763 0.875 9.74875 2.7175 9.74875 4.97625C9.74875 5.30125 9.77625 5.61375 9.84375 5.91125C6.435 5.745 3.41875 4.11125 1.3925 1.6225C1.03875 2.23625 0.83125 2.93875 0.83125 3.695C0.83125 5.115 1.5625 6.37375 2.6525 7.1025C1.99375 7.09 1.3475 6.89875 0.8 6.5975C0.8 6.61 0.8 6.62625 0.8 6.6425C0.8 8.635 2.22125 10.29 4.085 10.6712C3.75125 10.7625 3.3875 10.8062 3.01 10.8062C2.7475 10.8062 2.4825 10.7913 2.23375 10.7362C2.765 12.36 4.2725 13.5538 6.065 13.5925C4.67 14.6838 2.89875 15.3412 0.98125 15.3412C0.645 15.3412 0.3225 15.3263 0 15.285C1.81625 16.4563 3.96875 17.125 6.29 17.125C13.835 17.125 17.96 10.875 17.96 5.4575C17.96 5.27625 17.9538 5.10125 17.945 4.9275C18.7588 4.35 19.4425 3.62875 20 2.79875Z" fill="white"/>
+          </div>
+          <div class="next">
+            <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L11 11L1 21" stroke="white" stroke-width="2"/>
             </svg>
-          </a>
-          <a href="##">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9.99875 0C4.4775 0 0 4.59056 0 10.2534C0 14.7827 2.865 18.6252 6.84 19.9822C7.34 20.0767 7.5225 19.7601 7.5225 19.4882C7.5225 19.2444 7.51375 18.5997 7.50875 17.7444C4.7275 18.3635 4.14 16.3695 4.14 16.3695C3.68625 15.1849 3.03 14.8695 3.03 14.8695C2.12125 14.2338 3.0975 14.2466 3.0975 14.2466C4.10125 14.3193 4.62875 15.3036 4.62875 15.3036C5.52125 16.8699 6.97 16.418 7.54 16.155C7.63 15.4925 7.88875 15.0406 8.175 14.784C5.955 14.5249 3.62 13.6453 3.62 9.71728C3.62 8.59773 4.01 7.68242 4.65 6.96499C4.54625 6.70584 4.20375 5.66288 4.7475 4.25227C4.7475 4.25227 5.5875 3.97653 7.4975 5.30289C8.295 5.07566 9.15 4.96204 10.0013 4.95821C10.85 4.96332 11.7062 5.07566 12.505 5.30417C14.4137 3.97781 15.2525 4.25355 15.2525 4.25355C15.7975 5.66544 15.455 6.70712 15.3525 6.96627C15.9937 7.6837 16.38 8.599 16.38 9.71856C16.38 13.6568 14.0425 14.5236 11.815 14.7776C12.1737 15.0942 12.4937 15.7197 12.4937 16.6759C12.4937 18.0469 12.4812 19.1524 12.4812 19.4882C12.4812 19.7626 12.6613 20.0818 13.1687 19.9809C17.1375 18.6227 20 14.7815 20 10.2534C20 4.59056 15.5225 0 9.99875 0Z" fill="white"/>
-            </svg>
-          </a>
+          </div>
         </div>
-      </div>
-      <div class="main-container__description">
-        <h1>Core</h1>
-        <p>
-          The newest cryptocurrency. <br>
-          Live in your world,<br>
-          trade in our.
-        </p>
-      </div>
-      <div class="scroll-down">
-        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M46.809 16.6354L39.1666 16.675V33.7813L11.8836 6.49828L6.49829 11.8836L33.7813 39.1666L16.675 39.1666L16.6354 46.809H46.809V16.6354Z" fill="#0500FF"/>
-        </svg>
+        <swiper
+          ref="mySwiper"
+          :options="swiperOptions"
+          class="main-container__swiper"
+          v-if="cryptoData && itemData">
+          <template v-for="(slide, index) in cryptoData">
+            <swiper-slide :key="index" v-if="index <= 11">
+              <div class="main-container__slider-item">
+                <div class="main-container__slider-item-top">
+                  <div class="main-container__slider-item-top-inner">
+                    <div class="top_head">
+                      <div class="top_head-left">
+                        <div class="top_head-left-small medium">{{slide.symbol}}</div>
+                        <div class="top_head-left-large medium">{{parseFloat(slide.current_price).toFixed(2)}}</div>
+                        <div class="top_head-left-small medium">24H Vol {{parseFloat(slide.high_24h).toFixed(3)}}</div>
+                      </div>
+                      <div class="top_head-right medium" :class="Number(slide.price_change_24h) < 0 ? 'red' : 'green'">
+                        {{parseFloat(slide.price_change_24h).toFixed(2)}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="main-container__slider-item-bottom">
+                  <div class="txt medium">{{itemData[index].title}}</div>
+                 <img :src="require(`@/assets/img/main-slider/${itemData[index].image}`)" alt="" class="main-container__slider-img">
+                </div>
+              </div>
+            </swiper-slide>
+          </template>
+        </swiper>
       </div>
     </div>
   </div>
@@ -49,184 +57,261 @@
 <script>
 
 export default {
-  name: 'MainContainer',
+  props: {
+    itemData: {
+      type: Array,
+      require: true
+    }
+  },
   data () {
     return {
-      firstAnimation: false
+      cryptoData: false,
+      firstAnimation: false,
+      swiperOptions: {
+        speed: 2000,
+        slidesPerView: 'auto',
+        loop: true,
+        freeMode: true,
+        navigation: {
+          nextEl: '.next',
+          prevEl: '.prev'
+        }
+      }
+    }
+  },
+  computed: {
+    swiper () {
+      return this.$refs.mySwiper.$swiper
     }
   },
   mounted () {
     setTimeout(() => {
       this.firstAnimation = true
     }, 700)
+    const url = ['https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false']
+    const request = url.map(u => fetch(u))
+    Promise.all(request)
+      .then(responses => Promise.all(responses.map(r => r.json())))
+      .then(responses => (this.cryptoData = responses[0]))
+      .then(responses => console.log(responses))
   },
   methods: {
     visibilityChanged () {
       this.$store.commit('setMenuStatus', 0)
-    },
-    test () {
-      this.$store.commit('setStart', true)
     }
   }
 }
 </script>
 <style scoped>
-  .main-video__container{
-    position: absolute;
-    top: 0%;
-    right: -15%;
-    padding-top: 75%;
-    width: 75%;
-    transform: translateY(-40%);
+  .top_head-right.green{
+    color: #89C988;
   }
-  .main-video__container video{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    opacity: 0;
-    transform: scale(.8);
-    transition: .6s cubic-bezier(0.79, 0.01, 0.15, 0.99);
+  .top_head-right.red{
+    color: #E17E54;
   }
-  .animHead .main-video__container video{
-    transform: scale(1);
-    opacity: 1;
-    transition-delay: .4s;
+  .main-container__slider-nav div:hover path{
+    stroke: #44EFFF;
   }
-  .gradient{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 3;
+  .main-container__slider-nav path{
+    transition: .6s cubic-bezier(.79,.01,.15,.99);
   }
-  .scroll-down{
-    position: absolute;
-    z-index: 20;
-    bottom: 90px;
-    right: 80px;
+  .prev{
+    margin-left: -45px;
     cursor: pointer;
+    transition: .6s cubic-bezier(.79,.01,.15,.99);
   }
-  .main-container__description p{
-    font-size: 72px;
-    line-height: 80px;
-    transform: translateY(10px);
-    opacity: 0;
-    transition: .6s cubic-bezier(0.79, 0.01, 0.15, 0.99);
+  .prev:hover{
+    transform: translateX(-10px);
   }
-  .animHead p{
-    transform: translateY(0px);
-    opacity: 1;
-    transition-delay: .6s;
+  .next:hover{
+    transform: translateX(10px);
   }
-  .main-container__description h1{
-    font-size: 260px;
-    transform: translateY(10px);
-    opacity: 0;
-    transition: .6s cubic-bezier(0.79, 0.01, 0.15, 0.99);
+  .next{
+    margin-right: -15px;
+    cursor: pointer;
+    transition: .6s cubic-bezier(.79,.01,.15,.99);
   }
-  .animHead h1{
-    transform: translateY(0px);
-    opacity: 1;
-    transition-delay: .5s;
+  .main-container__swiper{
+    z-index: 10;
   }
-  .main-container__description{
+  .main-container__slider-nav{
     position: absolute;
+    bottom: 18%;
+    width: 100%;
     left: 0px;
-    bottom: 85px;
-    padding-left: 80px;
-    z-index: 5;
-  }
-  .main-container__header .left{
-    font-size: 20px;
-    line-height: 28px;
-  }
-  .follow-container a:hover path{
-    fill: #ff7152;
-  }
-  .follow-container a path{
-    transition: .6s cubic-bezier(0.79, 0.01, 0.15, 0.99);
-  }
-  .follow-container .ttl{
-    font-size: 20px;
-  }
-  .follow-container a{
-    margin-left: 15px;
-  }
-  .follow-container{
-    display: flex;
-    align-items: center;
-  }
-  #main{
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    border-bottom: 1px solid rgba(255,255,255,.05);
-    background: #00050F;
-  }
-  .main-container__header{
-    position: relative;
-    z-index: 20;
-    width: 100%;
+    z-index: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-top: 75px;
-    opacity: 0;
-    transition: .6s cubic-bezier(0.79, 0.01, 0.15, 0.99);
+    align-items: flex-start;
   }
-  .animHead .main-container__header{
+  .main-container__slider-item-bottom{
+    position: relative;
+    width: 100%;
+    padding-top: 60%;
+    margin-top: 30px;
+  }
+  .main-container__slider-img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  .main-container__slider-item-bottom .txt{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 69%;
+    height: 100%;
+    padding: 16px;
+    z-index: 2;
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .main-container__slider-item-top{
+    width: 100%;
+    position: relative;
+    padding-top: 78%;
+    background: rgba(255,255,255,.05);
+    border-radius: 4px;
+  }
+  .main-container__slider-item-top-inner{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    z-index: 2;
+  }
+  .swiper-slide{
+    width: 25%;
+    padding-right: 30px;
+  }
+  .main-container__slider{
+    width: calc(100% + 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: .8s cubic-bezier(.79,.01,.15,.99);
+  }
+  .animated  .main-container__slider{
+    transform: translateY(0px);
     opacity: 1;
-    transition-delay: .4s;
+    transition-delay: .3s;
+  }
+  .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+  }
+  .main-container__background{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: .8s cubic-bezier(.79,.01,.15,.99);
+  }
+  .animated .main-container__background{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+  .main-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 800px;
+    position: relative;
+  }
+  h1{
+    font-size: 96px;
+    line-height: 110px;
+    color: #fff;
+    margin-top: auto;
+    text-align: center;
+    margin-bottom: 120px;
+  }
+  h1 div{
+    overflow: hidden;
+    font-size: inherit;
+  }
+  h1 span{
+    overflow: hidden;
+    font-size: inherit;
+    display: flex;
+    transform: translateY(120%);
+    transition: .8s cubic-bezier(.79,.01,.15,.99);
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+  }
+  h1 > div:first-child span{
+    transition-delay: .2s;
+  }
+  h1 > div:last-child span{
+    transition-delay: .3s;
+  }
+  .animated h1 span{
+    transform: translateY(0%);
+  }
+  .top_head{
+    display: flex;
+    justify-content: space-between;
+  }
+  .top_head-left-small:first-child{
+    text-transform: uppercase;
+  }
+  .top_head-left-small{
+    opacity: .5;
+    font-size: 13px;
+  }
+  .top_head-left-large{
+    font-size: 20px;
+    margin: 5px 0px;
+  }
+  .swiper-wrapper{
+    transition-timing-function: cubic-bezier(.79,.01,.15,.99)!important;
   }
   /*Laptop 1440*/
   @media (max-width: 1900px){
-    .main-video__container {
-      right: -15%;
-      padding-top: 75%;
-      width: 75%;
+    .main-container{
+      min-height: 700px;
     }
-    .main-container__description h1 {
-      font-size: 210px;
+    h1{
+      font-size: 60px;
+      line-height: 74px;
+      margin-bottom: 30px;
     }
-    .main-container__description p{
-      font-size: 46px;
-      line-height: 54px;
+    .swiper-slide{
+      padding-right: 15px;
     }
-    .main-container__description{
-      bottom: 30px;
-      padding-left: 40px;
+    .main-container__slider-item-bottom{
+      margin-top: 15px;
     }
-    .main-container__header{
-      margin-top: 30px;
-    }
+   .main-container__slider {
+     width: calc(100% + 15px);
+     margin-left: 15px;
+     margin-bottom: 15px;
+   }
   }
   /*Ipad Pro 1024*/
   @media (max-width: 1365px){}
   /*Ipad 768*/
   @media (max-width: 1023px){
-    .main-video__container{
-      right: -38%;
-      padding-top: 130%;
-      width: 130%;
-    }
-    .main-container__header .left {
-      font-size: 13px;
-      line-height: 22px;
-    }
-    .main-container__description p {
-      font-size: 32px;
-      line-height: 40px;
-    }
-    .main-container__description h1{
-      font-size: 96px;
-    }
-    .scroll-down{
-      display: none;
-    }
   }
   /*Mobile 320*/
   @media (max-width: 767px){

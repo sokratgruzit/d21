@@ -1,51 +1,45 @@
 <template>
   <div class="body-container">
-    <StartContainer v-if="false"/>
-    <MainContainer/>
-    <Community :itemData="$store.state.community"/>
-    <About/>
-    <Statistic :statData="$store.state.statistic"/>
-    <LottieContainer/>
-    <Reviews/>
-    <Faq :itemData="$store.state.faq"/>
-    <CommunityPopup :itemData="$store.state.community"/>
+    <MainContainer :itemData="$store.state.mainSliderItems"/>
+    <CurrencyContainer/>
+    <Announcements/>
+    <TrustContainer/>
+    <TradeContainer/>
+    <IconsContainer/>
+    <VideoContainer/>
+    <Investments/>
   </div>
 </template>
 
 <script>
 import MainContainer from '@/components/MainContainer.vue'
-import Community from '@/components/Community.vue'
-import CommunityPopup from '@/components/CommunityPopup.vue'
-import About from '@/components/About.vue'
-import Faq from '@/components/Faq.vue'
-import Reviews from '../components/Reviews'
-import Statistic from '../components/Statistic'
-import StartContainer from '../components/Start'
-import LottieContainer from '../components/LottieContainer'
+import CurrencyContainer from '@/components/CurrencyContainer.vue'
+import Announcements from '@/components/Announcements.vue'
+import TrustContainer from '@/components/TrustContainer.vue'
+import TradeContainer from '@/components/TradeContainer.vue'
+import IconsContainer from '@/components/IconsContainer.vue'
+import VideoContainer from '@/components/VideoContainer.vue'
+import Investments from '@/components/Investments.vue'
 
 export default {
   name: 'Home',
   components: {
-    LottieContainer,
-    StartContainer,
-    Statistic,
-    Reviews,
     MainContainer,
-    Community,
-    CommunityPopup,
-    Faq,
-    About
+    CurrencyContainer,
+    Announcements,
+    TrustContainer,
+    TradeContainer,
+    IconsContainer,
+    VideoContainer,
+    Investments
   }
 }
 </script>
 <style scoped>
-  .body-container{
-    padding-left: 210px;
-  }
   /*Ipad 768*/
   @media (max-width: 1023px){
-    .body-container{
-      padding-left: 180px;
-    }
+  }
+  /*Mobile 320*/
+  @media (max-width: 767px){
   }
 </style>
