@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: '/d21-landing/'
+  publicPath: '/d21/'
 }
